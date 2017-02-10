@@ -8,7 +8,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    cv::Mat test1 = cv::imread("/home/leilei/Documents/test1.jpg");
+    cv::Mat test1 = cv::imread("/home/usr/Documents/test1.jpg");
     cv::imshow("Test1", test1);
 }
 
