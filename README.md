@@ -51,8 +51,8 @@ Qt版本：5.8
 2. 将qmake加入环境变量  
 
 ```
-    echo "# Use Qt qmak." >> ~/.bashrc
-    echo "export PATH="/home/usr/Qt/5.8/gcc_64/bin:$PATH"
+    echo "# Use Qt qmake." >> ~/.bashrc
+    echo "export PATH="/home/usr/Qt/5.8/gcc_64/bin:$PATH" >> ~/.bashrc
 ```
 
   
