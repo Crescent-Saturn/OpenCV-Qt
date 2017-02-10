@@ -39,9 +39,24 @@ Qt版本：5.8
    
   
   
-#### Install Qt
+#### Install Qt  
 
+1. 在QT官网下载最新的版本5.8.0: qt-unified-linux-x64-2.0.5-online.run，并执行安装
 
+```
+    sudo chmod a+x qt-unified-linux-x64-2.0.5-online.run
+    ./qt-unified-linux-x64-2.0.5-online.run
+```  
+
+2. 将qmake加入环境变量  
+
+```
+    echo "# Use Qt qmak." >> ~/.bashrc
+    echo "export PATH="/home/usr/Qt/5.8/gcc_64/bin:$PATH"
+```
+
+  
+  
 ### Qt Configuration
 
 
