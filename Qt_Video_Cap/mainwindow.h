@@ -31,10 +31,10 @@ private:
 //    cv::VideoWriter writer;   //make a video record
 
 private slots:
-    void openCamera();
+//    void openCamera();
     void readFrame();
-    void closeCamera();
-    void takingPictures();
+//    void closeCamera();
+//    void takingPictures();
 
 };
 #endif // MAINWINDOW_H
