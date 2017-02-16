@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <iostream>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -11,11 +12,15 @@ MainWindow::MainWindow(QWidget *parent) :
     timer = new QTimer(this);
     ui->label->setScaledContents(true); // Fit the video to label area
 //    ui->label_2->setScaledContents(true); //
-    cam.open(0);
-    timer->start(33);
+
 //    move(-640/2, -480/2);
 
-    connect(timer,      SIGNAL(timeout()),this,SLOT(readFrame()));
+    connect(timer,SIGNAL(timeout()),this,SLOT(readFrame()));
+    connect(timer,SIGNAL(timeout()),this,SLOT(calculation()));
+
+    cam.open(0);
+    timer->start(33);
+
 //    connect(ui->openCam, SIGNAL(clicked()), this, SLOT(openCamera()));
 //    connect(ui->takePic, SIGNAL(clicked()), this, SLOT(takingPictures()));
 //    connect(ui->closeCam, SIGNAL(clicked()), this, SLOT(closeCamera()));
@@ -45,6 +50,13 @@ void MainWindow::readFrame()
     QImage img1 = QImage((const unsigned char*)frame.data,
                          frame.cols, frame.rows, QImage::Format_RGB888).rgbSwapped();
     ui->label->setPixmap(QPixmap::fromImage(img1));
+}
+
+void MainWindow::calculation()
+{
+//    int i=0;
+    i = i+1;
+    std::cout<<i<<std::endl;
 }
 
 //void MainWindow::takingPictures()
