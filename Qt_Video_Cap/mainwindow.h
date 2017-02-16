@@ -27,12 +27,14 @@ private:
     cv::VideoCapture cam;
 //    QImage  image;
     QTimer *timer;
+    int i;
 //    double rate; //FPS
 //    cv::VideoWriter writer;   //make a video record
 
 private slots:
 //    void openCamera();
     void readFrame();
+    void calculation();
 //    void closeCamera();
 //    void takingPictures();
 
