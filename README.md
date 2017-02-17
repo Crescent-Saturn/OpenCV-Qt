@@ -73,3 +73,13 @@ ls /usr/local/lib/*.so
 
 ### Test
 参考 Hello_Qt_OpenCV
+
+
+
+### Examples
+Linux_Video_Cap中完全使用Qt自带库来实现开启摄像头及捕捉图像（Qt-Media）    
+同时添加了交互按键       
+
+
+Qt_Video_Cap则使用OpenCV在Qt窗口中开启摄像头以及捕捉图像(VideoCapture)     
+移除按键
