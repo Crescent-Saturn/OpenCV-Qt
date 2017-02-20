@@ -83,3 +83,40 @@ Linux_Video_Cap中完全使用Qt自带库来实现开启摄像头及捕捉图像
 
 Qt_Video_Cap则使用OpenCV在Qt窗口中开启摄像头以及捕捉图像(VideoCapture)     
 移除按键
+
+### Qt True OpenCV configuration    
+在Qt Creator中新建Non-Qt Project--Plain C++ Application.     
+修改.pro文件为：     
+    
+    ```   
+    Linux
+    TEMPLATE = app
+    #CONFIG += console
+    CONFIG -= app_bundle
+    CONFIG -= qt
+    CONFIG += c++17
+
+    INCLUDEPATH +=/usr/local/include/opencv
+    LIBS += \
+         -L/usr/local/lib\
+        -lopencv_calib3d \
+        -lopencv_photo \
+        -lopencv_core\
+        -lopencv_shape\
+        -lopencv_features2d\
+        -lopencv_stitching\
+        -lopencv_flann \
+        -lopencv_superres\
+        -lopencv_highgui\
+        -lopencv_videoio\
+        -lopencv_imgcodecs\
+        -lopencv_video\
+        -lopencv_imgproc\
+        -lopencv_videostab\
+        -lopencv_ml\
+        -lopencv_objdetect
+
+    SOURCES += main.cpp
+    ```
+    
+    将console注释掉以解决无法在Application Output显示结果的错误
