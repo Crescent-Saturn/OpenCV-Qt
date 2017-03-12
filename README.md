@@ -10,6 +10,12 @@ Qt版本：5.8
 #### Install OpenCV
 1. 下载压缩包opencv3.2.0
 2. 安装OpenCV所需的库（编译器、必须库、可选库）
+	```
+	[compiler] sudo apt-get install build-essential
+	[required] sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+	[optional] sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
+	```
+	
 3. CMake编译
     ```
     cd home/usr/local/opencv-3.2.0  
@@ -17,7 +23,7 @@ Qt版本：5.8
     cd build  
     cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..  
     sudo make -j4  
-    j4指用4个 core 进行 make， 以提高编译速度  
+    # run 4 jobs in parallel
     ```  
 
   
