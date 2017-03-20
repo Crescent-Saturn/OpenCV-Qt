@@ -52,12 +52,11 @@ Qt版本：5.8
     sudo chmod a+x qt-unified-linux-x64-2.0.5-online.run
     ./qt-unified-linux-x64-2.0.5-online.run
     ```  
-2. 将qmake加入环境变量  
-
-    ```  		
-    echo "# Use Qt qmake." >> ~/.bashrc
-    echo "export PATH="/home/usr/Qt/5.8/gcc_64/bin:$PATH" >> ~/.bashrc
-    ```		
+2. 将qmake加入环境变量    
+	```  		
+	echo "# Use Qt qmake." >> ~/.bashrc
+	echo "export PATH="/home/usr/Qt/5.8/gcc_64/bin:$PATH" >> ~/.bashrc
+	```	
 
   
   
