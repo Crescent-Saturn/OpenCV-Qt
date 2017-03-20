@@ -94,8 +94,7 @@ Qt_Video_Cap则使用OpenCV在Qt窗口中开启摄像头以及捕捉图像(Video
 在Qt Creator中新建Non-Qt Project--Plain C++ Application.     
 修改.pro文件为：     
     
-    ```   
-    Linux
+	``` 
     TEMPLATE = app
     #CONFIG += console
     CONFIG -= app_bundle
@@ -123,6 +122,6 @@ Qt_Video_Cap则使用OpenCV在Qt窗口中开启摄像头以及捕捉图像(Video
         -lopencv_objdetect
 
     SOURCES += main.cpp
-    ```
+ 	```
     
-    将console注释掉以解决无法在Application Output显示结果的错误
+   将console注释掉以解决无法在Application Output显示结果的错误
