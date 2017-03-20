@@ -16,18 +16,17 @@ Qt版本：5.8
 	[optional] sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
 	```
 	
-3. CMake编译
-    ```
-    cd home/usr/local/opencv-3.2.0  
+3. CMake编译  		
+ 	```  		
+	cd home/usr/local/opencv-3.2.0  
     mkdir build  
     cd build  
     cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..  
-    sudo make -j4  
-    # run 4 jobs in parallel
-    ```  
+    sudo make -j4
+    # run 4 jobs in parallel	  
+	```  			
 
-  
-  
+
 4. 安装   
     ```  
     sudo make install  
@@ -55,20 +54,20 @@ Qt版本：5.8
     ```  
 2. 将qmake加入环境变量  
 
-    ```
+    ```  		
     echo "# Use Qt qmake." >> ~/.bashrc
     echo "export PATH="/home/usr/Qt/5.8/gcc_64/bin:$PATH" >> ~/.bashrc
-    ```
+    ```		
 
   
   
 ### Qt Configuration
 1. 首先在终端查看所有可用OpenCV库：  
     ```  
-ls /usr/local/lib/*.so  
+	ls /usr/local/lib/*.so  
     ```  
 2. 在Qt Creator中新建Qt Widgets Application, 并在.pro文件中 `SOURCES`之前加入以下：     
-    ```linux
+    ```
     INCLUDEPATH += /usr/local/include/opencv  
     
     LIBS += -L/usr/local/include/opencv \        
